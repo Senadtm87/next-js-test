@@ -21,7 +21,7 @@ const TodosPage: React.FunctionComponent<ITodosPageProps> = (props) => {
     if (router.isFallback) {
       return <div>Loading...</div>
     }
-  
+   const {todo}=props;
 
     return <div>
         <h1>This is static paths with dynamic routes page</h1>
@@ -30,10 +30,10 @@ const TodosPage: React.FunctionComponent<ITodosPageProps> = (props) => {
             and first 10 are prerendered,
              others are generated when first request appears and loading is shown until page is generated. (Try Ids above 10)</p>
         <p>Current todo task is :</p>
-        <p>Id:{props.todo.id}</p>
-        <p>UserId:{props.todo.userId}</p>
-        <p>Title:{props.todo.title}</p>
-        <p>Completed:{props.todo.completed == true ? "Yes" : "No"}</p>
+        <p>Id:{todo.id}</p>
+        <p>UserId:{todo.userId}</p>
+        <p>Title:{todo.title}</p>
+        <p>Completed:{todo.completed == true ? "Yes" : "No"}</p>
 
 
     </div>;
